@@ -12,11 +12,13 @@ public class LLNode<T> {
     }
     public LLNode<T> getNext(){
        //get the next node in the chain
+       return next; //placeholder 
     }
     public void setInfo(){
         //set the nodes info
     }
     public T getInfo(){
         //get the nodes info
+        return null;//placeholder
     }
 }
