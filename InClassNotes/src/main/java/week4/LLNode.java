@@ -5,19 +5,20 @@ public class LLNode<T> {
     LLNode<T> next;
 
     public LLNode(T info){
-        this.next=null;
-        this.info=info;
+        //constructor for our Node
     }
-    public void setNext(LLNode<T> nextNode){
-        this.next=nextNode;
+    public void setNext(){
+        //Setter for the node object
     }
     public LLNode<T> getNext(){
-       return this.next; 
+       //get the next node in the chain
+       return next; //placeholder 
     }
-    public void setInfo(T info){
-        this.info=info;
+    public void setInfo(){
+        //set the nodes info
     }
     public T getInfo(){
-        return this.info;
+        //get the nodes info
+        return null;//placeholder
     }
 }
