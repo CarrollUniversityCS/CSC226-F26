@@ -20,7 +20,13 @@ public class TreatmentHistory {
      */
     public TreatmentRecord undoLastAction() {
         // TODO: Pop and return the newest record. Empty pop returns null.
-        return null;
+        if(allRecords.isEmpty()) {
+            return null;
+        }
+        if(allrecords.size() > 0) {
+            return allRecords.pop();
+        }
+        return allRecords.pop();
     }
 
     /**
@@ -28,6 +34,9 @@ public class TreatmentHistory {
      */
     public String displayHistory() {
         // TODO: Use the stack's top-to-bottom string representation.
+        for(int i = 0; i < allRecords.size(); i++) {
+            System.out.println(allRecords.peek()); // peak is a method that return the entire stack without changing it
+        }
         return "[]";
     }
 }

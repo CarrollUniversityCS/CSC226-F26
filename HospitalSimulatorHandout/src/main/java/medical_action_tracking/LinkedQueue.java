@@ -16,15 +16,21 @@ public class LinkedQueue<T> {
 
     public LinkedQueue() {
         // TODO: Initialize an empty queue.
+        front=0;
+        rear=0;
+        size=0;
+        
     }
 
     public void enqueue(T item) {
         // TODO: Add a node at the rear. Update both references when the queue is empty.
+
     }
 
     public T dequeue() {
         // TODO: Remove and return the front item, or return null if empty.
         // TODO: When removing the last item, make both front and rear null.
+
         return null;
     }
 

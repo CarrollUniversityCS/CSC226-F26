@@ -10,6 +10,10 @@ public class EmergencyWaitingRoom {
 
     public EmergencyWaitingRoom() {
         // TODO: Create one empty FIFO queue for each triage level.
+        level1 = new LinkedQueue<>();
+        level2 = new LinkedQueue<>();
+        level3 = new LinkedQueue<>();
+        level4 = new LinkedQueue<>();
     }
 
     /**
@@ -19,6 +23,8 @@ public class EmergencyWaitingRoom {
      */
     public boolean addPatient(Patient patient) {
         // TODO: Validate the patient and place them in the matching lane.
+        
+        
         return false;
     }
 
