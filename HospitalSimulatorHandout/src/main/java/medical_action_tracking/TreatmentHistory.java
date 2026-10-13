@@ -23,7 +23,7 @@ public class TreatmentHistory {
         if(allRecords.isEmpty()) {
             return null;
         }
-        if(allrecords.size() > 0) {
+        if(allRecords.size() > 0) {
             return allRecords.pop();
         }
         return allRecords.pop();
@@ -34,9 +34,9 @@ public class TreatmentHistory {
      */
     public String displayHistory() {
         // TODO: Use the stack's top-to-bottom string representation.
-        for(int i = 0; i < allRecords.size(); i++) {
-            System.out.println(allRecords.peek()); // peak is a method that return the entire stack without changing it
-        }
-        return "[]";
+        // for(int i = 0; i < allRecords.size(); i++) {
+        //     System.out.println(allRecords.peek()); // peak is a method that return the entire stack without changing it
+        // }
+        return allRecords.toString();
     }
 }
