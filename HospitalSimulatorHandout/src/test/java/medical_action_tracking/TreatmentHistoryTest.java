@@ -43,4 +43,17 @@ class TreatmentHistoryTest {
         assertEquals("[]", history.displayHistory());
         assertNull(history.undoLastAction());
     }
+    @Test 
+    void addNewTreatmentAfterUndo(){ // help with youtube
+        TreatmentHistory history = new TreatmentHistory();
+        history.addTreatment("P001", "Assessment", "2026-09-27 09:00");
+        history.addTreatment("P002", "X-ray", "2026-09-27 09:05");
+        history.undoLastAction();
+        history.addTreatment("P003", "Medication", "2026-09-27 09:10");
+
+        String displayed = history.displayHistory();
+
+        assertEquals("[2026-09-27 09:10 | P003 | Medication, "
+            + "2026-09-27 09:00 | P001 | Assessment]", displayed);
+    }
 }
