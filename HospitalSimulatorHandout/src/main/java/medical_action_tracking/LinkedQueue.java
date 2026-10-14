@@ -76,18 +76,26 @@ public class LinkedQueue<T> {
     @Override
     public String toString() {
         // TODO: Recursively build a string from front to rear without changing the queue.
-        StringBuilder result = new StringBuilder();
+        StringBuilder result = new StringBuilder("[");
         appendNodesRecursively(front, result);
+        result.append("]");
         return result.toString();
     }
 
     private void appendNodesRecursively(Node current, StringBuilder result) {
         // TODO: Add the current node's data, then recursively visit current.next.
         // TODO: Stop at the null-node base case.
+      // result.append("["); // forgot to add this and my code ended up not working properly for test case never mind i was stupidly wrong 
         if (current == null) {
+            // result.append("[");
+            // result.append("]");
             return;
+        }
+        if (result.length() > 1) { // this is what i needed for the coma to be after the first value and not before it or after the last value
+            result.append(", ");
         }
         result.append(current.data);
         appendNodesRecursively(current.next, result);
+       
     }
 }

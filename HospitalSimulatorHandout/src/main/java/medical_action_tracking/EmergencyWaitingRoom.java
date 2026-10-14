@@ -47,7 +47,7 @@ public class EmergencyWaitingRoom {
         
         
         
-        return true;
+        return false;
     }
 
     /**
