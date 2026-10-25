@@ -27,6 +27,10 @@ class HeapPQ {
         return lastIndex == -1;
     }
 
+    private void swap(int a, int b) {
+        
+    }
+
     // TODO Round 1: insert p in the next open slot, then restore the max-heap.
     void enqueue(Patient p) {
     }
