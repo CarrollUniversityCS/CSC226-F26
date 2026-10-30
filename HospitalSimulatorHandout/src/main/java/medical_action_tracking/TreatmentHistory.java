@@ -8,8 +8,12 @@ public class TreatmentHistory {
     }
 
     public void addTreatment(String patientID, String treatment, String timestamp) {
+        addTreatment(patientID, treatment, timestamp, null);
+    }
+
+    public void addTreatment(String patientID, String treatment, String timestamp, String performedBy) {
         // This is a small worked example: create the record, then push it on the stack.
-        TreatmentRecord record = new TreatmentRecord(patientID, treatment, timestamp);
+        TreatmentRecord record = new TreatmentRecord(patientID, treatment, timestamp, performedBy);
         allRecords.push(record);
     }
 

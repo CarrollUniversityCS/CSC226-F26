@@ -4,11 +4,17 @@ public class TreatmentRecord {
     private String patientID;
     private String treatmentName;
     private String timestamp;
+    private String performedBy;
 
     public TreatmentRecord(String patientID, String treatmentName, String timestamp) {
+        this(patientID, treatmentName, timestamp, null);
+    }
+
+    public TreatmentRecord(String patientID, String treatmentName, String timestamp, String performedBy) {
         this.patientID = patientID;
         this.treatmentName = treatmentName;
         this.timestamp = timestamp;
+        this.performedBy = performedBy;
     }
 
     public String getPatientID() {
@@ -24,6 +30,10 @@ public class TreatmentRecord {
     public String getTimestamp() {
         //  Return the timestamp.
         return timestamp;
+    }
+
+    public String getPerformedBy() {
+        return performedBy;
     }
 
     @Override
