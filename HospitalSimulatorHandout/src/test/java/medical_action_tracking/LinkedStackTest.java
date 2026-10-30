@@ -35,4 +35,10 @@ class LinkedStackTest {
 
         assertThrows(IllegalArgumentException.class, () -> stack.push(null));
     }
+    @Test
+    void PopemptyStackReturnsNull(){ // easy code to write
+        LinkedStack<String> stack = new LinkedStack<>();
+        assertNull(stack.pop());
+    }
+
 }
