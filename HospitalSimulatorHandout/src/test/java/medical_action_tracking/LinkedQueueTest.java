@@ -47,4 +47,12 @@ class LinkedQueueTest {
 
         assertThrows(IllegalArgumentException.class, () -> queue.enqueue(null));
     }
+    @Test 
+    void OnlyContainsoneitem(){ // also easy to write
+        LinkedQueue<String> queue = new LinkedQueue<>();
+        queue.enqueue("first");
+        assertEquals("first", queue.peekFront());
+        assertEquals(1, queue.size());
+    }
+
 }

@@ -12,6 +12,7 @@ class EmergencyWaitingRoomTest {
         Patient levelThree = patient("P003", 3);
         Patient firstLevelOne = patient("P001", 1);
         Patient secondLevelOne = patient("P002", 1);
+        
 
         assertTrue(waitingRoom.addPatient(levelThree));
         assertTrue(waitingRoom.addPatient(firstLevelOne));
@@ -50,4 +51,11 @@ class EmergencyWaitingRoomTest {
         return new Patient(patientID, "Test", "Patient", 30, "Checkup", triageLevel,
                 "Waiting", "ER-001", 9, "INS-001");
     }
+
+    @Test 
+    void testNextPatientReturnsNullWhenEmpty() {
+        EmergencyWaitingRoom waitingRoom = new EmergencyWaitingRoom();
+        assertNull(waitingRoom.nextPatient());
+    }
+
 }
